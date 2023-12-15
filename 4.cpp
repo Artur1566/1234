@@ -12,12 +12,14 @@ void showEl_line(const int* ar, int size, char del = ' '){
 }
 
 void showEl_matrix(const int* ar, int size, int col, char del = ' ') {
-	int j = 0;
-	for (int i = 0; i < size; i++){
-		for (int q = j; q < j; q++){
-		    j++;
-			cout << ar[q] << del;
-		}
+	for (int i = 0; i < (size * col); i++){
+	    cout << ar[i];
+	    if ((i + 1) % size == 0){
+            cout << endl;
+	    }
+	    else {
+	        cout << del;
+	    }
 	}
 }
 
